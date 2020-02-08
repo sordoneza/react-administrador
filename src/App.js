@@ -1,3 +1,4 @@
+// @flow
 import React from "react"
 import logo from "./logo.svg"
 import styled from "styled-components"
@@ -5,6 +6,19 @@ import styled from "styled-components"
 const Wrapper = styled.div`
   text-align: center;
 `
+type Props = {
+  label?: string, // ? con este simbolo se especifica que esta propiedad es opcional
+  to: string,
+  children?: any
+}
+
+const Link = ({ label, to, children }: Props) => {
+  return (
+    <a className="App-link" href={to} target="_blank" rel="noopener noreferrer">
+      {label || children}
+    </a>
+  )
+}
 
 function App() {
   return (
@@ -14,14 +28,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Link to="http://reactjs.org">Click Aqui</Link>
       </header>
     </Wrapper>
   )
