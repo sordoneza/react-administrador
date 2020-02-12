@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
+    "classnames": "^2.2.6",
     "flow-bin": "^0.118.0",
     "lint-staged": "^10.0.7",
     "prettier": "^1.19.1",
@@ -23,7 +24,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "flow": "flow"
+    "flow": "flow",
+    "storybook": "start-storybook -p 9000"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -41,6 +43,9 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-docs": "^5.3.12",
+    "@storybook/addon-info": "^5.3.12",
+    "@storybook/react": "^5.3.12",
     "eslint": "^6.8.0",
     "husky": "^4.2.1"
   },
