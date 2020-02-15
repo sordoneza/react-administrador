@@ -1,6 +1,7 @@
 // @flow
 import React from "react";
 import BaseInput from "../BaseInput";
+import Label from "../Label";
 
 // @types
 import type { BaseInputProps } from "../BaseInput";
@@ -10,15 +11,16 @@ type Props = {
 } & BaseInputProps;
 
 const Input = ({ name, type, error, label }: Props) => {
-  const Label = () => {
-    return <label htmlFor={name}>{label}</label>;
+  const Header = () => {
+    return <Label htmlFor={name}>{label}</Label>;
   };
+
   return (
     <BaseInput
       name={name}
       type={type}
       error={error}
-      header={label && <Label />}
+      header={label && <Header />}
     />
   );
 };
